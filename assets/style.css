@@ -1,0 +1,214 @@
+:root {
+  --Dark-Purple: #260147;
+  --aquamarine: aquamarine;
+  --white: #e0eae4;
+  --heliotrope: #7cffa3;
+}
+
+.profile-pic {
+  width: 195px;
+  height: 195px;
+  margin-left: 2%;
+}
+
+header {
+  padding: 20px;
+  background-image: linear-gradient
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+}
+
+header nav a {
+  margin-left: 1%;
+}
+
+nav {
+  display: flex;
+  flex-direction: flex end;
+  text-decoration-color: aqua;
+  background-color: rgb(0, 192, 144);
+  justify-content: flex-end;
+}
+
+::selection {
+  background-color: var(--aquamarine);
+  color: var(--Dark-Purple);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1.75rem;
+  line-height: 1.5;
+  color: var(--white);
+  background-color: var(--Dark-Purple);
+}
+
+h1 {
+  display: flex;
+  color:var(--heliotrope);
+  font-weight: bolder;
+  font-size: larger;
+  text-align: center;
+  align-self: center;
+}
+
+.Information-box {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 100%;
+  margin: 2rem auto;
+
+}
+
+footer {
+  margin: 2rem;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.box-column {
+  flex: 1 0 100%;
+  padding: 1.5rem;
+  transition: 500ms linear;
+  margin-bottom: 1.5rem;
+}
+
+.Information-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  color: var(--heliotrope);
+  outline: 2px outset var(--white);
+  outline-offset: -2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.Information-box .box-header {
+  position: relative;
+  margin: -4rem 0 1.5rem 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--Dark-Purple);
+  color: var(--heliotrope);
+  border: 2px solid var(--white);
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+}
+
+.Information-box:hover,
+.Information-box:hover .box-header {
+  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 25px var(--heliotrope);
+}
+
+
+.Information-box .picture-block {
+  display: flex;
+  flex-grow: 1;
+  flex-flow: center;
+}
+
+.Information-box pre {
+  white-space: pre-wrap;
+  overflow: auto;
+  tab-size: 4;
+  padding: 1.2rem 1rem;
+  color: var(--white);
+  border-radius: 8px;
+  background-image: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+
+.Information-box pre {
+  white-space: pre-wrap;
+  overflow: auto;
+  tab-size: 4;
+  padding: 1.2rem 1rem;
+  color: var(--white);
+  border-radius: 8px;
+  background-image: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+
+.Information-pictures {
+  flex-direction: row;
+}
+
+a[href='#top']::before {
+  content: '🏰 ';
+  display: inline-block;
+  margin-left: 2px;
+}
+
+a[href='#about']::before {
+  content: '📋 ';
+  display: inline-block;
+  margin-left: 2px;
+}
+
+a[href='#occupational-history']::before {
+  content: '💼 ';
+  display: inline-block;
+  margin-left: 2px;
+}
+
+a[href='#projects']::before {
+  content: '🎓 ';
+  display: inline-block;
+  margin-left: 2px;
+}
+
+a[href='#contact']::before {
+  content: '📞 ';
+  display: inline-block;
+  margin-left: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .box-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .box-column:last-child {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    width: 75%;
+  }
+
+  .box-column {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  header {
+    width: 100%;
+  }
+}
